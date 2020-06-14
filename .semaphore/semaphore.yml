@@ -1,11 +1,11 @@
 version: v1.0
-name: NPM Test
+name: NPM Run
 agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu1804
 blocks:
-  - name: Test
+  - name: Run
     task:
       jobs:
         - name: Test
@@ -16,4 +16,3 @@ blocks:
             - npm install
             - cache store
             - npm run build --if-present
-            - npm test
